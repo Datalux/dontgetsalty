@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stanza {{ room_code }} · Don't Get Salty</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v={{ static_version }}" />
+  <link rel="icon" type="image/png" href="/static/favicon-32.png?v={{ static_version }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/static/favicon-16.png?v={{ static_version }}" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png?v={{ static_version }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css?v={{ static_version }}" />
+</head>
+<body>
+  <div id="error-box"></div>
+  <main id="app">
+    <header class="app-header">
+      <button class="code-chip" id="copy-code-btn" title="Copia il codice">
+        <span class="code-value">{{ room_code }}</span>
+        <span class="copy-icon" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </span>
+      </button>
+      <span class="conn-status" id="conn-status">
+        <span class="dot" id="conn-dot"></span>
+        <span id="conn-label">Connessione...</span>
+      </span>
+    </header>
+    <div id="content" class="fade-in">
+      <p class="hint">Caricamento...</p>
+    </div>
+  </main>
+
+  <script>
+    window.ROOM_CODE = "{{ room_code }}";
+  </script>
+  <script src="/static/js/app.js?v={{ static_version }}"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don't Get Salty</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v={{ static_version }}" />
+  <link rel="icon" type="image/png" href="/static/favicon-32.png?v={{ static_version }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/static/favicon-16.png?v={{ static_version }}" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png?v={{ static_version }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css?v={{ static_version }}" />
+</head>
+<body class="hero-gradient">
+  <div id="error-box"></div>
+  <main>
+    <svg class="brand-mark" width="72" height="72" viewBox="0 0 100 100" aria-hidden="true">
+      <polygon points="50,6 90,50 50,50" fill="rgba(255,255,255,0.95)" />
+      <polygon points="50,6 10,50 50,50" fill="rgba(255,255,255,0.75)" />
+      <polygon points="50,94 90,50 50,50" fill="rgba(255,255,255,0.6)" />
+      <polygon points="50,94 10,50 50,50" fill="rgba(255,255,255,0.85)" />
+    </svg>
+    <h1>Don't Get Salty</h1>
+    <p class="subtitle">Anonymous questions. Anonymous votes. Don't take it personally.</p>
+
+    <section class="card">
+      <h2>Crea una stanza</h2>
+      <div class="field-row">
+        <label for="create-nickname">Il tuo nome</label>
+        <input type="text" id="create-nickname" placeholder="Es. Giuseppe" maxlength="64" />
+      </div>
+      <button id="create-btn" class="block">Crea stanza</button>
+    </section>
+
+    <p class="divider-text">oppure</p>
+
+    <section class="card">
+      <h2>Entra in una stanza</h2>
+      <div class="field-row">
+        <label for="join-code">Codice stanza</label>
+        <input type="text" id="join-code" placeholder="Es. AB3XZ" maxlength="8" style="text-transform:uppercase" autocomplete="off" />
+      </div>
+      <div class="field-row">
+        <label for="join-nickname">Il tuo nome</label>
+        <input type="text" id="join-nickname" placeholder="Es. Giuseppe" maxlength="64" />
+      </div>
+      <button id="join-btn" class="secondary block">Entra</button>
+    </section>
+
+    <p class="anon-note">Le domande e i voti sono sempre anonimi tra i giocatori.</p>
+  </main>
+
+  <script src="/static/js/index.js?v={{ static_version }}"></script>
+</body>
+</html>

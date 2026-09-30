@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ggame
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: GGAME_MIN_PLAYERS
+        value: "3"
