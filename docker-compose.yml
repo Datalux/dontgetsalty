@@ -1,0 +1,8 @@
+services:
+  ggame:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GGAME_MIN_PLAYERS: "3"
+    restart: unless-stopped
